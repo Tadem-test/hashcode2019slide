@@ -75,7 +75,7 @@ public class Main {
 		}
 	}
 	
-	 private static void printConventionally() {
+	 private static void ausgabeInTxtDatei() {
 	        PrintWriter pWriter = null;
 	        String s = "a_output.txt";
 	        try {
@@ -134,11 +134,11 @@ public class Main {
 				}
 			}
 			endScore += bestScore;
-			System.out.println("Score = " + endScore);
 			orderedSlides.add(slides.get(bestSlideIndex));
 			slides.remove(bestSlideIndex);
 		}
-		printConventionally();
+		System.out.println("Score = " + endScore);
+		ausgabeInTxtDatei();
 	}
 
 	private static ArrayList<Integer> getPairedPhotos(int i, Photo[] photos) {
